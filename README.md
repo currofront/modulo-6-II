@@ -1,2 +1,2 @@
 # modulo-6-II
-Laboratorio módulo 6.1 Bootcamp JavaScript Lemoncode
+Laboratorio módulo 6.2 Bootcamp JavaScript Lemoncode
