@@ -5,16 +5,23 @@ var encryptedAlphabet = "qw,ert(yuio'pa:sdfg!hjklz¡xcv)bnm";
 
 //Coger valor de los inputs
 
-var decryptedText = () => document.getElementById("decryptedText").value;
-var encryptedText = () => document.getElementById("encryptedText").value;
+var decryptedText = () => (document.getElementById("decryptedText").value).toLowerCase();
+var encryptedText = () => (document.getElementById("encryptedText").value).toLowerCase();
 
 
 var translateText = (text, Alphabet, secretCode) => {
     var texto = "";
     for (var index = 0; index < text.length; index++) {
-
+        var space = false;
         for (var i = 0; i < Alphabet.length; i++) {
-            Alphabet[i] === text[index] ? texto += secretCode[i] : " ";
+
+            if (Alphabet[i] === text[index]) {
+                texto += secretCode[i];
+                space = true;
+            };
+        };
+        if(!space) {
+            texto += " "
         };
     };
     return texto;
